@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Employee",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "loalhost",
+          "Port": 7869
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/EmployeeService",
+      "UpstreamHttpMethpd": [ "GET", "PUT", "POST", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student",
+      "DownstreamScheme": "https",
+      "DownstreamHostandPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7870
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/StudentService",
+      "UpstreamHttpMethod": ["GET","PUT","POST","DELETE"]
+    },
+  ]
+
+}
